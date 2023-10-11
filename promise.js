@@ -19,7 +19,13 @@ const p=new Promise((resolve,reject)=>{
 
 p.then((a)=>{
     console.log(a);
+    return a.a
+})
+.then((b)=>{
+    console.log("welcom to hell");
 })
 .catch((err)=>{
     console.log(err);
+}).finally(()=>{
+    console.log("promise resolved");
 })
